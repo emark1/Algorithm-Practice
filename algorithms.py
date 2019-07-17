@@ -171,6 +171,4 @@ def IsPrime(num):
         print(num, "is a prime number") 
     
     else: 
-    print(num, "is not a prime number") 
-
-    print("Num")
+    print(num, "is not a prime number.") 
