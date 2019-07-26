@@ -172,3 +172,12 @@ def IsPrime(num):
     
     else: 
     print(num, " is not a prime number.") 
+
+correct_list = [1, 2, 3, 4, 5]
+new_list = [1, 3, 4, 5]
+def MissingElement():
+  for element in correct_list:
+    if element not in new_list:
+      print("Missing " + str(element) + "!")
+
+MissingElement()
