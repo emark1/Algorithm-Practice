@@ -198,3 +198,10 @@ def biggest_number(list):
     return bignumber
 
 print(biggest_number(numbers))
+
+
+my_array = [1, 2, 3, 4, 5]
+def duplicate_array(first_array)
+    duplicate = first_array
+    new_array = first_array + duplicate
+    return new_array
