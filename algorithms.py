@@ -233,4 +233,10 @@ def primecheck():
 
 print(primecheck())
 
-    
+def BubbleSort(numlist):
+    for num in range(len(numlist)-1, 0, -1):
+        for i in range(num):
+            if list[i] > list[i+1]:
+                tempnum = list[i]               
+                list[i] = list[i+1]
+                list[i+1] = tempnum
