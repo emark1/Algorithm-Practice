@@ -253,3 +253,9 @@ def shortBubbleSort(alist):
                alist[i] = alist[i+1]
                alist[i+1] = temp
        passnum = passnum-1
+
+def PentagonalNumber(n):
+    a = 1
+    for i in range(1, n):
+        a += 5 * i
+    return a
