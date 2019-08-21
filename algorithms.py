@@ -259,3 +259,15 @@ def PentagonalNumber(n):
     for i in range(1, n):
         a += 5 * i
     return a
+
+def KaprekarsConstant(n):
+    count = 0
+    while n != 6174:
+        n = list(str(n))
+        if len(n) < 4:
+            while len(n) != 4:
+                n.insert(1, '0')
+        count += 1
+        x, y = int(''.join([str(l) for l in (sorted(n))])[::-1]), int(''.join([str(l) for l in (sorted(n))]))
+        n = x - y
+    return count
