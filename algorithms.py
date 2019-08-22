@@ -271,3 +271,16 @@ def KaprekarsConstant(n):
         x, y = int(''.join([str(l) for l in (sorted(n))])[::-1]), int(''.join([str(l) for l in (sorted(n))]))
         n = x - y
     return count
+
+import itertools
+def ScaleBalancing(a):
+    x = list(int(l) for l in a[0][1:-1].split(','))
+    y = list(int(l) for l in a[1][1:-1].split(','))
+    for a in y:
+        if x[0] + a == x[1] or x[1] + a == x[0]:
+            return str(a)
+    for pair in itertools.combinations(y, 2):
+        if pair[0] + x[0] == x[1] + pair[1] or pair[0] + x[1] == pair[1] + x[0] or pair[0] + pair[1] + x[0] == x[1] or pair[0] + pair[1] + x[1] == x[0]:
+            l, i = min(pair), max(pair)
+            return ','.join([str(l), str(i)])
+    return 'not possible'
