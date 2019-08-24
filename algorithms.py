@@ -254,12 +254,14 @@ def shortBubbleSort(alist):
                alist[i+1] = temp
        passnum = passnum-1
 
+#PentagonalNumber
 def PentagonalNumber(n):
     a = 1
     for i in range(1, n):
         a += 5 * i
     return a
 
+#Kaprekars
 def KaprekarsConstant(n):
     count = 0
     while n != 6174:
@@ -272,6 +274,7 @@ def KaprekarsConstant(n):
         n = x - y
     return count
 
+# Scale Balancing
 import itertools
 def ScaleBalancing(a):
     x = list(int(l) for l in a[0][1:-1].split(','))
