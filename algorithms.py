@@ -287,3 +287,20 @@ def ScaleBalancing(a):
             l, i = min(pair), max(pair)
             return ','.join([str(l), str(i)])
     return 'not possible'
+
+
+
+
+# bubble sort Javascript:
+function BubbleSort(nums) {
+  for (var i = 0; i < nums.length; i++) {
+    for (var j = 0; j < nums.length; j++) {
+      if (nums[j] > nums[j+1]) {
+        var tempNum = nums[j]
+        nums[j] = nums[j+1]
+        nums[j+1] = tempNum
+      }
+    }
+  }
+}
+
