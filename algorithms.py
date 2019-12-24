@@ -304,3 +304,21 @@ function BubbleSort(nums) {
   }
 }
 
+# Selection sort Javascript: 
+function SelectionSort(nums) {
+  var minIdx;
+  var tempNum;
+ 
+  for (var i = 0; i < nums.length; i++) {
+    let minIdx = i
+    for (var j = i+1; j < nums.length; j++) {
+      if (nums[j] < nums[minIdx]) {
+        minIdx = j;
+      }
+    }
+    tempNum = nums[i]
+    nums[i] = nums[minIdx]
+    nums[minIdx] = tempNum
+  }
+  return nums
+}
