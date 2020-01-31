@@ -321,3 +321,66 @@ def merge(left_half,right_half):
 unsorted_list = [64, 34, 25, 12, 22, 11, 90]
 
 print(merge_sort(unsorted_list))
+
+
+
+# bubble sort Javascript:
+function BubbleSort(nums) {
+  for (var i = 0; i < nums.length; i++) {
+    for (var j = 0; j < nums.length; j++) {
+      if (nums[j] > nums[j+1]) {
+        var tempNum = nums[j]
+        nums[j] = nums[j+1]
+        nums[j+1] = tempNum
+      }
+    }
+  }
+}
+
+# Selection sort Javascript: 
+function SelectionSort(nums) {
+  var minIdx;
+  var tempNum;
+ 
+  for (var i = 0; i < nums.length; i++) {
+    let minIdx = i
+    for (var j = i+1; j < nums.length; j++) {
+      if (nums[j] < nums[minIdx]) {
+        minIdx = j;
+      }
+    }
+    tempNum = nums[i]
+    nums[i] = nums[minIdx]
+    nums[minIdx] = tempNum
+  }
+  return nums
+}
+
+# Insertion Sort in JS:
+function insertion_Sort(arr)
+{
+  for (var i = 1; i < arr.length; i++) 
+  {
+    if (arr[i] < arr[0]) 
+    {
+      //move current element to the first position
+      arr.unshift(arr.splice(i,1)[0]);
+    } 
+    else if (arr[i] > arr[i-1]) 
+    {
+      //leave current element where it is
+      continue;
+    } 
+    else {
+      //find where element should go
+      for (var j = 1; j < i; j++) {
+        if (arr[i] > arr[j-1] && arr[i] < arr[j]) 
+        {
+          //move element
+          arr.splice(j,0,arr.splice(i,1)[0]);
+        }
+      }
+    }
+  }
+  return arr;
+}
