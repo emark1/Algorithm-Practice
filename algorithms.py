@@ -430,3 +430,32 @@ function PalindromeCheck(myString) {
     return "Uh oh ah geez"
   }
 }
+
+function Factorial(number) {
+  factorial = 1
+  factorialTotal = 1;
+  for (var i = 1; factorial <= number; factorial += 1) {
+    factorialTotal = factorialTotal * factorial
+  }
+  return factorialTotal;
+}
+
+function PrimeNumCheck(number) {
+  for (var i = 2; i < number; i++) {
+    if (number%i==0) {
+      return "That ain't no prime"
+    } 
+  }
+
+  return "That's a prime!"
+}
+
+
+function Factorial(number) {
+
+  if (number == 0) {
+    return 1
+  }
+
+  return number * Factorial(number - 1)
+}
